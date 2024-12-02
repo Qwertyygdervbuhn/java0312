@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const sach = {
+    name: "Ball",
+    color: "Red",
+    size: "Medium",
+    weight: "500g",
+    material: "Rubber",
+
+    display: function () {
+        console.log(`Name: ${this.name}, Color: ${this.color}, Size: ${this.size}, Weight: ${this.weight}, Material: ${this.material}`);
+    }
+};
+
+console.log("Original object:");
+sach.display();
+
+const serializedSach = JSON.stringify(sach);
+console.log("\nSerialized object:");
+console.log(serializedSach);
+
+const deserializedSach = JSON.parse(serializedSach);
+
+console.log("\nDeserialized object:");
+console.log(deserializedSach);
+
+console.log("\nDeserialized object details:");
+console.log(`Name: ${deserializedSach.name}, Color: ${deserializedSach.color}, Size: ${deserializedSach.size}, Weight: ${deserializedSach.weight}, Material: ${deserializedSach.material}`);
+    
+    </script>
+</body>
+</html>
